@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+    <div class="container  animated fadeIn">
+        <img class="img-fluid rounded show-img img-thumbnail" src="<%= project.image %>" alt="<%= project.title %>">
+        <h2><%= project.title %></h2>
+        <h3><%= project.description %></h3>
+        <p><%- project.htmlBody %></p>
+        <p><%= project.created.toDateString() %></p>
+
+        <% if (currentUser) { %>
+            <div class="d-flex justify-content-end">
+                <div class="btn-group mr-4">
+                    <a class="btn btn-warning px-4" href="/projects/<%= project._id %>/edit"><i class="fas fa-pencil-alt fa-fw fa-lg"></i></a>
+                </div>
+                <div class="btn-group">
+                    <form class="" action="/projects/<%= project._id %>?_method=DELETE" method="post">                
+                        <button class="btn btn-danger px-4"><i class="fas fa-trash-alt fa-fw fa-lg"></i></button>
+                    </form>        
+                </div>            
+            </div>
+        <% } %>
+    </div>
+
+<% include partials/footer %>

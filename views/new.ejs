@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<div class="container animated fadeIn">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-xs-12">
+            <h1>New Project</h1>        
+            <form class="mt-4" action="/projects" method="post">
+                <div class="form-group required">
+                    <input class="form-control" required type="text" name="project[image]" placeholder="image url *">
+                </div>
+                <div class="form-group required">
+                    <input class="form-control" required type="text" name="project[title]" placeholder="title *">
+                </div>
+                <div class="form-group">
+                        <input class="form-control" type="text" name="project[type]" placeholder="type">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="project[description]" placeholder="description">
+                </div>
+                <div class="form-group required">
+                    <textarea class="form-control" required name="project[mdBody]" rows="10" placeholder="body *"></textarea>
+                    <small class="form-text text-muted">
+                        You can use <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" target="_blank">Markdown</a> here.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Submit!</button>
+                </div>                
+            </form>
+            <a href="#" onclick="history.back();">Go Back</a> 
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
