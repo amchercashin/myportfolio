@@ -45,11 +45,11 @@ These is also standalone version where all js libraries are embedded into single
 
 You can try it [online](https://amchercashin.github.io/ETH_ColdBrainWallet/ColdBrainWallet-standalone.html), but for real personal use you should download it from [github repo](https://github.com/amchercashin/ETH_ColdBrainWallet/) and put on a offline device.
 
-#### Goal
+##### Goal
 Find a sweet spot between safety from theft, safety from loss and ease of use.
 
-#### Functionality
-##### Offline Ethereum wallet (private key and address) generation as a function of 3 parameters (inspired by [original idea and code by Vitalik](https://www.reddit.com/r/ethereum/comments/535ovp/is_there_a_javascript_library_for_generating/d7q8hq7/?st=j7gaygm8&sh=435756ff)):
+##### Functionality
+###### Offline Ethereum wallet (private key and address) generation as a function of 3 parameters (inspired by [original idea and code by Vitalik](https://www.reddit.com/r/ethereum/comments/535ovp/is_there_a_javascript_library_for_generating/d7q8hq7/?st=j7gaygm8&sh=435756ff)):
 1. Hardness: integer value from [1000, 3000] range. This (with the function iteslf) ensures to take some coputational effort to get a key. Thus making it more time consuming to brute-force. 
 2. Email. To protect from batch key picking attack, where keys generated for every popular password or phrase, then check for positive balance. 
 3. Secret phrase. Actually a password. Should be long enough, not a actual meaningfull phrase in any language, not a "popular" password and not used anywhere else.
@@ -70,15 +70,15 @@ Total steps = _hardness_ parameter.
 
 It takes form 10s on my laptop to 1.5 minutes on a smartphone to get keypair or sign transaction.
 
-##### Get address from any private key
+###### Get address from any private key
 Simply, infer Ethereum address from private key you can provide. Usefull if you have your own way to generate private key.
 
-##### Sign offline transaction
+###### Sign offline transaction
 This can be done with key, generated on the fly again with hardness, email, and secret phrase parameters. Or with raw private key instead.
 
 Generated transaction code contains no private information and could be safly posted everywhere (if you are going to actually make it, surely). To _make_ a transaction you should broadcast this code to the blockchain (use MyEtherWallet.com or etherscain.io servoces for an example).
 
-#### Dependencies: 
+##### Dependencies: 
 1. Browserifyed [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) v1.3.3 for general Ethereum / crypto functions.
 2. [QRCode.js](https://github.com/davidshimjs/qrcodejs) for QR Codes.
 `,
