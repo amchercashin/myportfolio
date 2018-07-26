@@ -62,8 +62,8 @@ app.use(function(req, res, next) {
 });
 
 //db connect
-// mongoose.connect("mongodb://localhost:27017/projects", { useNewUrlParser: true });
-mongoose.connect("mongodb://myportfoliosite:myportfoliosite4mLab@ds145881.mlab.com:45881/myportfoliodb", { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+// mongoose.connect("mongodb://myportfoliosite:myportfoliosite4mLab@ds145881.mlab.com:45881/myportfoliodb", { useNewUrlParser: true });
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -77,6 +77,7 @@ app.use("/projects", projectsRoutes);
 app.use("/", authRoutes);
 
 
-app.listen(process.env.PORT, function () {
-    console.log("Server has started!!!")
+app.listen(process.env.PORT, process.env.IP,function () {
+    console.log("Server has started!!!");
+    console.log("DB at: "+ process.env.DATABASEURL);
 });
