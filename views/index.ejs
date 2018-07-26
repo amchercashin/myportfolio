@@ -4,7 +4,7 @@
         <header class="jumbotron py-3">
             <div class="container">
                 <!-- <h3>Welcome to MyPortfolio</h3> -->
-                <h3>Welcome to MyPortfolio DEMO</h3>
+                <h5>Welcome to My Portfolio DEMO</h5>
                 <p>Some of my projects below</p>
                 
             </div>
@@ -15,9 +15,9 @@
                 <% projects.forEach(function(project) { %>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <a class="custom-card" href="/projects/<%= project._id %>">
-                            <div class="card mb-4 border-light animated">
+                            <div class="card mb-4 border border-light animated">
                                 <!--style="width: 18rem;" -->
-                                <img class="card-img-top p-1 border-bottom rounded animated" src="<%= project.image %>" alt="<%= project.title %>">
+                                <img class="card-img-top p-1 rounded animated" src="<%= project.image %>" alt="<%= project.title %>">
                                 <% if (currentUser) { %>
                                 <div class="card-img-overlay d-flex flex-row justify-content-end align-items-start">
                                     <div class="btn-group">
@@ -44,6 +44,25 @@
                     </div>
                 <% }); %>
             <!-- </div> -->
+            <% if (currentUser) { %>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a class="custom-card" href="/projects/new">
+                        <div class="card mb-4 border border-success animated">
+                            <!--style="width: 18rem;" -->
+                            <img class="card-img-top p-1 rounded animated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOs/w8AAgMBgMd74YAAAAAASUVORK5CYII=" alt="Add New" id="add-new-image">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">   
+                                <i class="fas fa-plus-circle fa-10x" id="add-new-icon"></i> 
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Add New
+                                </h5>
+                                <!-- <a href="#" class="btn btn-primary">Show</a> -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% } %>
         </div>
 
     </div>

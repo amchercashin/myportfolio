@@ -45,3 +45,8 @@ img.show-img {
 .btn-opacity:hover {
     opacity: 1;
 }
+
+#add-new-icon {    
+    color: lightgreen;
+    opacity: 0.5;
+}
