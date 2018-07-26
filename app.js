@@ -80,5 +80,7 @@ let port = process.env.PORT || "80";
 let ip = process.env.IP || "localhost";
 app.listen(port, ip,function () {
     console.log("Server has started!!!");
-    console.log("DB at: "+ process.env.DATABASEURL);
+    console.log("IP: " + ip);
+    console.log("PORT: " + port);
+    console.log("DB at: "+ DBurl);
 });
