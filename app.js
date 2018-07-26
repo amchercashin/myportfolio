@@ -76,11 +76,11 @@ app.use("/", indexRoutes);
 app.use("/projects", projectsRoutes);
 app.use("/", authRoutes);
 
-let port = process.env.PORT || "80";
-let ip = process.env.IP || "localhost";
-app.listen(port, ip,function () {
+let port = process.env.PORT || 80;
+// let ip = process.env.IP || "localhost";
+app.listen(port, function () {
     console.log("Server has started!!!");
-    console.log("IP: " + ip);
+    // console.log("IP: " + ip);
     console.log("PORT: " + port);
     console.log("DB at: "+ DBurl);
 });
