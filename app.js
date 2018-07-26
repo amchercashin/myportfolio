@@ -62,6 +62,7 @@ app.use(function(req, res, next) {
 });
 
 //db connect
+let DBurl = process.env.DATABASEURL || "mongodb://localhost:27017/projects";
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
 app.set("view engine", "ejs");
@@ -75,8 +76,9 @@ app.use("/", indexRoutes);
 app.use("/projects", projectsRoutes);
 app.use("/", authRoutes);
 
-
-app.listen(process.env.PORT, process.env.IP,function () {
+let port = process.env.PORT || "80";
+let ip = process.env.IP || "localhost";
+app.listen(port, ip,function () {
     console.log("Server has started!!!");
     console.log("DB at: "+ process.env.DATABASEURL);
 });
