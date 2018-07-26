@@ -63,7 +63,7 @@ app.use(function(req, res, next) {
 
 //db connect
 let DBurl = process.env.DATABASEURL || "mongodb://localhost:27017/projects";
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+mongoose.connect(DBurl, { useNewUrlParser: true });
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
