@@ -26,7 +26,7 @@ function seedDB() {
                             console.log(err);
                             reject(err);
                         } else {
-                            console.log("added a user");
+                            console.log("added a admin");
                             resolve(user.save());
                         }
                     });
@@ -37,13 +37,3 @@ function seedDB() {
 }
 
 module.exports = seedDB;
-
-var resolveAfter2Seconds = function() {
-    console.log("starting slow promise");
-    return new Promise(resolve => {
-      setTimeout(function() {
-        resolve(20);
-        console.log("slow promise is done");
-      }, 2000);
-    });
-  };

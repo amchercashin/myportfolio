@@ -16,7 +16,7 @@ function seedDB() {
             if (err) {
                 console.log(err);
             } else {
-                console.log("added a user");
+                console.log("added a test-user");
                 user.save();
             }
         });
