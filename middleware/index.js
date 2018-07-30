@@ -10,7 +10,7 @@ middlewareObj.isLoggedIn = function (req, res, next) {
 }
 
 middlewareObj.isRegistrationEnabled = function(req, res, next) {
-    if(middlewareObj.registrationEnabled) {
+    if(registrationEnabled) {
         return next();
     }
     res.redirect("back");
