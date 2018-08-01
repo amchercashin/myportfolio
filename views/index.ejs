@@ -4,8 +4,13 @@
         <header class="jumbotron py-3">
             <div class="container">
                 <!-- <h3>Welcome to MyPortfolio</h3> -->
-                <h5>Welcome to My Portfolio DEMO</h5>
-                <p>Some of my projects below</p>
+                <% if(prodEnv) { %>
+                    <h5>Welcome to My Portfolio</h5>
+                    <p>Some of my projects below</p>
+                <% } else { %>
+                    <h5>This is DEMO</h5>
+                    <p>Add a new user. Fill free to edit/delete. You should accept <a href="https://termsfeed.com/disclaimer/afd1741b9558c3a92d554f8499b62e31" target="_blank">disclaimer</a> before use.</p>
+                <% } %>
                 
             </div>
         </header>
