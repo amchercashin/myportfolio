@@ -35,7 +35,7 @@ async function seedUsers(seedTestUser) {
     await seedAdminUserDB();
     if (seedTestUser) { seedTestUserDB(); }
 }
-let prodEnv = process.env.PROD || false;
+const prodEnv = process.env.PROD || false;
 seedUsers(!prodEnv);
 
 
@@ -63,7 +63,7 @@ app.use(function(req, res, next) {
 });
 
 //db connect
-let DBurl = process.env.DATABASEURL || "mongodb://localhost:27017/projects";
+const DBurl = process.env.DATABASEURL || "mongodb://localhost:27017/projects";
 mongoose.connect(DBurl, { useNewUrlParser: true });
 
 app.set("view engine", "ejs");
@@ -77,7 +77,7 @@ app.use("/", indexRoutes);
 app.use("/projects", projectsRoutes);
 app.use("/", authRoutes);
 
-let port = process.env.PORT || 80;
+const port = process.env.PORT || 80;
 // let ip = process.env.IP || "localhost";
 app.listen(port, function () {
     console.log("Server has started!!!");
