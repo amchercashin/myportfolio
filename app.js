@@ -35,7 +35,7 @@ async function seedUsers(seedTestUser) {
     await seedAdminUserDB();
     if (seedTestUser) { seedTestUserDB(); }
 }
-const prodEnv = process.env.PROD || false;
+const prodEnv = (process.env.PROD === "true") || false;
 seedUsers(!prodEnv);
 
 
@@ -84,4 +84,5 @@ app.listen(port, function () {
     // console.log("IP: " + ip);
     console.log("PORT: " + port);
     console.log("DB at: "+ DBurl);
+    console.log("PRODENV: "+ process.env.PROD);
 });
