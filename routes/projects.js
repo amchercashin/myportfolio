@@ -16,10 +16,7 @@ router.get("/", function (req, res) {
             res.redirect("/");
         }
         else {
-            res.render("index", { projects: projects,
-                                  prodEnv: (process.env.PROD === "true")
-                                }
-                        );
+            res.render("index", { projects: projects });
         }
     })
 
