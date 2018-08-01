@@ -7,7 +7,7 @@ var UserSchema = new mongoose.Schema({
 });
 
 UserSchema.plugin(passportLocalMongoose, {
-    interval: 1000,
+    interval: 500,
     maxInterval: 36000000,
     limitAttempts: true
 
