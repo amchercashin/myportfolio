@@ -35,7 +35,7 @@ async function seedUsers(seedTestUser) {
     await seedAdminUserDB();
     if (seedTestUser) { seedTestUserDB(); }
 }
-const prodEnv = (process.env.PROD === "true") || false;
+const prodEnv = (process.env.PROD === "true");
 seedUsers(!prodEnv);
 
 
