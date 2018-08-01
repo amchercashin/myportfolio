@@ -31,11 +31,12 @@ const middleware = require("./middleware");
 
 //Drop DB and Seed sample projects and/or users
 seedProjectsToDB();
-async function seedUsers(seedTestUser = false) {
+async function seedUsers(seedTestUser) {
     await seedAdminUserDB();
     if (seedTestUser) { seedTestUserDB(); }
 }
-seedUsers(true);
+let prodEnv = process.env.PROD || false;
+seedUsers(!prodEnv);
 
 
 
