@@ -1,6 +1,7 @@
+const prodEnv = (process.env.PROD === "true");
 const middlewareObj = {};
 
-middlewareObj.registrationEnabled = false;
+middlewareObj.registrationEnabled = !prodEnv;
 
 middlewareObj.isLoggedIn = function (req, res, next) {
     if(req.isAuthenticated()) {
