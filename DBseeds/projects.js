@@ -9,7 +9,7 @@ const seedData = [
         image: "https://trainingprdcdnendpoint.azureedge.net/Images/nodejs-520.jpg",
         title: "This site!",
         description: "My Portfolio web-site",
-        mdBody: `Check demo: [https://acherkashin-myportfolio-demo.herokuapp.com](https://acherkashin-myportfolio-demo.herokuapp.com).\r\n\r\nGithub: [https://github.com/amchercashin/myportfolio](https://github.com/amchercashin/myportfolio).\r\n\r\nThe stack: Bootsrtap 4, Node+Express, MongoDB, Passport.js for authentication.\r\n\r\nProjects routing follow RESTful API.\r\n\r\nApp has been
+        mdBody: `Check demo: [https://acherkashin-myportfolio-demo.herokuapp.com](https://acherkashin-myportfolio-demo.herokuapp.com).\r\n\r\nGithub: [https://github.com/amchercashin/myportfolio](https://github.com/amchercashin/myportfolio).\r\n\r\nThe stack: Bootsrtap 4, Node+Express, MongoDB, Passport.js for authentication.\r\n\r\nProjects routing follow RESTful routes.\r\n\r\nApp has been
 deployed to [Heroku](https://heroku.com) and DBs to [MLab](https://mlab.com).
 `,
         type: "web-dev",
@@ -19,9 +19,14 @@ deployed to [Heroku](https://heroku.com) and DBs to [MLab](https://mlab.com).
         image: "https://skappal7.files.wordpress.com/2017/05/benford-law-image.jpg?w=1200",
         title: "Benford's law web app",
         description: "Illustrating Benford's law with R and Shiny.",
-        mdBody: `This is a project I made during Data Science :tm: course with R at Johns Hopkins University.\r\n\r\nAbout: [https://rpubs.com/DonYagon/Benford](https://rpubs.com/DonYagon/Benford).\r\n\r\nWeb-app: [https://acherkashin.shinyapps.io/Benford](https://acherkashin.shinyapps.io/Benford).\r\n\r\nIn this section you can play with parameters of 4 different distributions (you can see their histograms at the right)\r\n\r\nEvery time you change something:\r\n\r\n- A new sample of 10 000 numbers for that distribution is generated.\r\n- 3 random arithmetic operations between this
-new and 3 other samples are performed elementwise with the result of some 10 000 numbers sequence.\r\n- Histogram of
-only first digits of these numbers generated. And you can see how it conforms to Benford's law\r\n
+        mdBody: `
+Made with [R](https://www.r-project.org/), [Rstudio](https://www.rstudio.com/), [ggplot2](https://ggplot2.tidyverse.org/) and [Shiny](https://www.rstudio.com/products/shiny/). I made this during Data Science course with R at Johns Hopkins University.
+
+About Benford's law: [https://rpubs.com/DonYagon/Benford](https://rpubs.com/DonYagon/Benford).
+
+Web-app: [https://acherkashin.shinyapps.io/Benford](https://acherkashin.shinyapps.io/Benford).
+
+Actually with aforementioned soft that was rather small and easy project.
 `,
         type: "R",
         created: new Date("2018-08-02")
@@ -30,9 +35,19 @@ only first digits of these numbers generated. And you can see how it conforms to
         // image: "https://images2.imgbox.com/16/27/cHZz2LnN_o.png",
         // image: "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA4Ny8zMjgvb3JpZ2luYWwvZWFybGllc3QtdGVuLWNvbW1hbmRtZW50cy5qcGc=",
         image: "http://www.canbum.net/cdn/29/2009/202/blank-stone-tablet_70469.jpg",
-        title: "Stone Tablets",
+        title: "Ethereum: Stone Tablets",
         description: "Notes service on Ethereum blockchain with no delete option",
-        mdBody: `[https://amchercashin.github.io/stone_tablets/](https://amchercashin.github.io/stone_tablets/)\r\n\r\nTrying myself is simple Solidity and blockchain development.\r\n\r\nAvailable on mainnet and Ropsten testnet.\r\n
+        mdBody: `
+[https://amchercashin.github.io/stone_tablets/](https://amchercashin.github.io/stone_tablets/)
+Trying myself is simple Solidity and blockchain development. You need [Metamask](https://metamask.io/) to use it. Available on Mainnet and Ropsten testnet.
+
+[Ethereum](https://en.wikipedia.org/wiki/Ethereum) is a "cryptocurrency". But more then that: it is a Virtual World Computer (called EVM - Ethereum Virtual Machine) that can compute any program and store data. The link above is an example of such a program that usually called "smartcontract" in blockchain world. World Computer - because EVM runs in parallel on thousands of nodes spread around the world. 
+
+While computes, EVM consumes ETH (Ethereum coin) as a payment. This both motivates people to run nodes and distributes EVM resources appropriately to the desire and ability to pay. Solidity - one of programming languages for EVM.
+
+Of course being world computer EVM is very: slow, expensive. But it design gives another benefits. In short: EVM is open and it can't be stoped. The balance of EVM week and strong parts defines it'se use. For now it justified only for the most critial applications. Critical usually means money: like  value transfer/store or records of rights. Upcoming scaling solution will make it appropriate for more use cases.
+
+PS. Please keep in mind: vade it prior formal web-dev education.
 `,
         type: "Ethereum",
         created: new Date("2018-08-03")
@@ -48,6 +63,8 @@ from previous step (string of 64 hex chars, without leading \"0x\"), concatenate
 address from any private key\r\nSimply, infer Ethereum address from private key you can provide. Usefull if you have
 your own way to generate private key.\r\n\r\n###### Sign offline transaction\r\nThis can be done with key, generated
 on the fly again with hardness, email, and secret phrase parameters. Or with raw private key instead.\r\n\r\nGenerated transaction code contains no private information and could be safly posted everywhere (if you are going to actually make it, surely). To _make_ a transaction you should broadcast this code to the blockchain (use MyEtherWallet.com or etherscain.io servoces for an example).\r\n\r\n##### PS\r\nThese is also standalone version where all js libraries are embedded into single html. This could be more convinient when transferring and using at different devices. It could be used on an old smartphone with no internet access for an example.\r\n\r\n##### Dependencies: \r\n1. Browserifyed [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) v1.3.3 for general Ethereum / crypto functions.\r\n2. [QRCode.js](https://github.com/davidshimjs/qrcodejs) for QR Codes.\r\n
+
+PPS. Please keep in mind: vade it prior formal web-dev education.
 `,
         type: "Ethereum",
         created: new Date("2018-08-04")
