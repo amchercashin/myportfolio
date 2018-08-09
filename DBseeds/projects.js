@@ -12,7 +12,8 @@ const seedData = [
         mdBody: `Check demo: [https://acherkashin-myportfolio-demo.herokuapp.com](https://acherkashin-myportfolio-demo.herokuapp.com).\r\n\r\nGithub: [https://github.com/amchercashin/myportfolio](https://github.com/amchercashin/myportfolio).\r\n\r\nThe stack: Bootsrtap 4, Node+Express, MongoDB, Passport.js for authentication.\r\n\r\nProjects routing follow RESTful API.\r\n\r\nApp has been
 deployed to [Heroku](https://heroku.com) and DBs to [MLab](https://mlab.com).
 `,
-        type: "web-dev"
+        type: "web-dev",
+        created: new Date("2018-08-05")
     },
     {
         image: "https://skappal7.files.wordpress.com/2017/05/benford-law-image.jpg?w=1200",
@@ -22,7 +23,8 @@ deployed to [Heroku](https://heroku.com) and DBs to [MLab](https://mlab.com).
 new and 3 other samples are performed elementwise with the result of some 10 000 numbers sequence.\r\n- Histogram of
 only first digits of these numbers generated. And you can see how it conforms to Benford's law\r\n
 `,
-        type: "R"
+        type: "R",
+        created: new Date("2018-08-02")
     },
     {
         // image: "https://images2.imgbox.com/16/27/cHZz2LnN_o.png",
@@ -32,7 +34,8 @@ only first digits of these numbers generated. And you can see how it conforms to
         description: "Notes service on Ethereum blockchain with no delete option",
         mdBody: `[https://amchercashin.github.io/stone_tablets/](https://amchercashin.github.io/stone_tablets/)\r\n\r\nTrying myself is simple Solidity and blockchain development.\r\n\r\nAvailable on mainnet and Ropsten testnet.\r\n
 `,
-        type: "Ethereum"
+        type: "Ethereum",
+        created: new Date("2018-08-03")
     },
     {
         image: "https://media.coindesk.com/uploads/2013/06/shutterstock_60475399.jpg",
@@ -46,7 +49,8 @@ address from any private key\r\nSimply, infer Ethereum address from private key 
 your own way to generate private key.\r\n\r\n###### Sign offline transaction\r\nThis can be done with key, generated
 on the fly again with hardness, email, and secret phrase parameters. Or with raw private key instead.\r\n\r\nGenerated transaction code contains no private information and could be safly posted everywhere (if you are going to actually make it, surely). To _make_ a transaction you should broadcast this code to the blockchain (use MyEtherWallet.com or etherscain.io servoces for an example).\r\n\r\n##### PS\r\nThese is also standalone version where all js libraries are embedded into single html. This could be more convinient when transferring and using at different devices. It could be used on an old smartphone with no internet access for an example.\r\n\r\n##### Dependencies: \r\n1. Browserifyed [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) v1.3.3 for general Ethereum / crypto functions.\r\n2. [QRCode.js](https://github.com/davidshimjs/qrcodejs) for QR Codes.\r\n
 `,
-        type: "Ethereum"
+        type: "Ethereum",
+        created: new Date("2018-08-04")
     },
     {
         image: "http://www.krastsvetmet.ru/images/catalog/tech/catalyst-systems-1.jpg",
@@ -65,7 +69,8 @@ NO2 Catalyst Efficiency Analysis in Nitric Acid production
 
 NO2 Catalyst Efficiency Analysis in Nitric Acid production                              
 `,
-        type: "DataSciense"
+        type: "DataSciense",
+        created: new Date("2018-08-01")
     },
     {
         image: "https://images2.imgbox.com/16/b3/ytFRE7eD_o.png",
@@ -76,7 +81,8 @@ CryptoKitties is one of the world’s first games to be built on blockchain tech
 and Ethereum possible. Bitcoin and ether are cryptocurrencies but CryptoKitties are cryptocollectibles. 
 You can buy, sell, or trade your CryptoKitty like it was a traditional collectible, secure in the knowledge that blockchain will track ownership securely.                              
         `,
-        type: "Ethereum"
+        type: "Ethereum",
+        created: new Date("2018-07-31")
     }
 ]
 
