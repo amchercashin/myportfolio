@@ -10,7 +10,7 @@ marked.setOptions({
 
 // INDEX route
 router.get("/", function (req, res) {
-    Project.find({}, function (err, projects) {
+    Project.find({}).sort('-created').exec(function (err, projects) {
         if (err) {
             console.log(err);
             res.redirect("/");
