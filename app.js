@@ -30,12 +30,17 @@ const middleware = require("./middleware");
 
 
 //Drop DB and Seed sample projects and/or users
-seedProjectsToDB();
 async function seedUsers(seedTestUser) {
     await seedAdminUserDB();
     if (seedTestUser) { seedTestUserDB(); }
 }
+
 const prodEnv = (process.env.PROD === "true");
+
+if (!prodEnv) {
+    seedProjectsToDB();
+}
+
 seedUsers(!prodEnv);
 
 
