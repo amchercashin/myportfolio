@@ -34,7 +34,7 @@ Actually with aforementioned soft that was rather small and easy project.
     {
         // image: "https://images2.imgbox.com/16/27/cHZz2LnN_o.png",
         // image: "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA4Ny8zMjgvb3JpZ2luYWwvZWFybGllc3QtdGVuLWNvbW1hbmRtZW50cy5qcGc=",
-        image: "http://www.canbum.net/cdn/29/2009/202/blank-stone-tablet_70469.jpg",
+        image: "http://www.canbum.net/cdn/29/2009/202/blank-stone-tablet-template_70470.jpg",
         title: "Ethereum: Stone Tablets",
         description: "Notes service on Ethereum blockchain with no delete option",
         mdBody: `
