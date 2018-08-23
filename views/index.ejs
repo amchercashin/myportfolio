@@ -20,9 +20,9 @@
                 <% projects.forEach(function(project) { %>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <a class="custom-card" href="/projects/<%= project._id %>">
-                            <div class="card mb-4 border border-light animated">
+                            <div class="shadow card mb-4 animated">
                                 <!--style="width: 18rem;" -->
-                                <img class="card-img-top p-1 rounded animated" src="<%= project.image %>" alt="<%= project.title %>">
+                                <img class="card-img-top p-1 rounded" src="<%= project.image %>" alt="<%= project.title %>">
                                 <% if (currentUser) { %>
                                 <div class="card-img-overlay d-flex flex-row justify-content-end align-items-start">
                                     <div class="btn-group">
